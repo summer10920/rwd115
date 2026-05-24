@@ -1,0 +1,148 @@
+body {
+  font-family: "Roboto", Arial, "Noto Sans TC", sans-serif;
+  background: #282c34;
+}
+
+#lokiSlider {
+  .carousel-item {
+    padding-bottom: 240px;
+    background: #282c34;
+
+    &::after {
+      content: '';
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3e%3cg opacity='0.5' stroke-width='1' stroke='%23000' fill='none'%3e%3cline y2='10' x2='10' y1='0' x1='0'/%3e%3cline y2='15' x2='5' y1='5' x1='-5'/%3e%3cline y2='5' x2='15' y1='-5' x1='5'/%3e%3c/g%3e%3c/svg%3e");
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    img {
+      filter: grayscale(50%) sepia(80%);
+    }
+
+    .carousel-caption {
+      z-index: 1;
+      padding-bottom: 120px;
+    }
+  }
+
+
+
+  &>button>i {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
+#lokiPark,
+#lokiService {
+  background: url("https://picsum.photos/1920/1800/?random=10") #3338 no-repeat center/cover fixed;
+}
+
+#lokiPark {
+  background-blend-mode: lighten;
+}
+
+#lokiService {
+  background-blend-mode: darken;
+}
+
+#lokiContact {
+  background: url("https://picsum.photos/1920/1080/?random=11") #000 no-repeat center/cover fixed;
+  background-blend-mode: luminosity;
+
+  #ff-compose {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    #ff-title-root.ff-title {
+      margin: 10px 0;
+    }
+
+    .ff-form {
+      backdrop-filter: blur(10px);
+      background: rgb(255, 193, 7, 0.3);
+      border-radius: 5px;
+    }
+
+    .ff-submit {
+      background: #ffc107;
+      border: none;
+      color: #333;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .ff-button-bar a {
+      visibility: hidden;
+    }
+
+    #ff-title-root {
+      margin: 3rem 0;
+      border-left: 5px solid white;
+      font-size: 2rem;
+      padding: 0 0 0 1rem;
+    }
+  }
+
+
+}
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+  #lokiPallet {
+    article {
+      padding-top: 250px;
+
+      .col:nth-child(even) {
+        transform: translateY(-50%);
+        padding-bottom: 100px;
+      }
+
+      .card {
+        .card-img {
+          transform: scale(1);
+          transition: transform 0.3s;
+        }
+
+        .card-img-overlay {
+          transform: scale(0);
+          transition: transform 0.3s;
+        }
+
+        &:hover {
+          .card-img {
+            transform: scale(1.2);
+          }
+
+          .card-img-overlay {
+            transform: scale(1);
+          }
+        }
+
+      }
+    }
+  }
+
+  #lokiPark {
+    .col {
+      transition: 0.3s;
+      filter: brightness(0.5);
+
+      &:hover {
+        transform: scale(1.2);
+        /* transform: translateY(-40px); */
+        z-index: 1;
+        filter: brightness(1);
+
+      }
+    }
+  }
+}
